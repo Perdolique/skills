@@ -1,6 +1,6 @@
 ---
 name: github-pull-request
-description: Generates GitHub PR titles and descriptions from code changes. Use when creating pull requests, updating PR details, submitting code for review, or when the user mentions pull request, PR, merge request, code review, or GitHub workflow.
+description: Generates GitHub pull request (PR) titles and descriptions from code changes. Use when creating pull requests, updating PR details, submitting code for review, generating PR text for chat output, or when the user mentions pull request, PR, merge request, code review, GitHub workflow, "write PR", "generate PR", "prepare PR text", or asks to show/create PR content.
 license: Unlicense
 ---
 
@@ -160,6 +160,7 @@ Fixes #156
 #### Examples: Boring vs Engaging
 
 **😴 Boring (don't do this):**
+
 ```markdown
 ## Summary
 
@@ -169,6 +170,7 @@ Fixed edge case.
 ```
 
 **🎉 Engaging (do this):**
+
 ```markdown
 ## Summary
 
@@ -191,6 +193,7 @@ International domain names were a pain - had to use punycode conversion. Not the
 **Another example - feature PR:**
 
 **😴 Boring:**
+
 ```markdown
 Added dark mode.
 Created toggle component.
@@ -198,6 +201,7 @@ Updated theme variables.
 ```
 
 **🎉 Engaging:**
+
 ```markdown
 ## Summary
 
