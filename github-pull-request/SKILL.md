@@ -1,6 +1,6 @@
 ---
 name: github-pull-request
-description: Generates GitHub pull request (PR) titles and descriptions from code changes. Use when creating pull requests, updating PR details, submitting code for review, generating PR text for chat output, or when the user mentions pull request, PR, merge request, code review, GitHub workflow, "write PR", "generate PR", "prepare PR text", or asks to show/create PR content.
+description: Generates GitHub pull request (PR) titles and descriptions from code changes. Use when creating PR, updating PR details, generating PR text for chat output, or when the user mentions pull request, PR, merge request, GitHub workflow, "write PR", "generate PR", "prepare PR text", or asks to show/create PR content.
 license: Unlicense
 ---
 
@@ -18,9 +18,13 @@ license: Unlicense
 8. **Push changes**: Ensure all commits are pushed to remote repository
 9. **Create or update PR**: Create new pull request or update existing one with generated content
 
+## Language Requirement
+
+- **ALWAYS write the entire PR in English only** - this includes title, description, and all sections
+- Never use any other language for PR content
+
 ## PR Title Format
 
-- **ALWAYS write PR titles in English only** - no other languages allowed
 - Keep it concise and descriptive (ideally ≤50 characters)
 - Use imperative mood (e.g., "Add feature" not "Added feature" or "Adds feature")
 - Accurately reflect the main purpose of the changes
@@ -42,6 +46,8 @@ Refactor build configuration for better performance
 ```
 
 ## PR Description Structure
+
+**Important**: Write all sections in English only.
 
 ### Required Sections
 
@@ -229,3 +235,4 @@ This lays the groundwork for user-customizable themes in the future. Right now i
 - Clearly indicate which packages are affected
 - Group changes by package in the summary
 - Consider using scoped PR titles like "feat(button): add loading state"
+

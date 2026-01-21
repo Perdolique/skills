@@ -69,3 +69,4 @@ BREAKING CHANGE: Color token values changed from RGB to HSL format
 - When fixing issues, include them at the end of commit message body
 - Format: - Fixes <ISSUE_NUMBER> (e.g., - Fixes #123 or - Fixes STL-1487)
 - Add one bullet per issue
+
