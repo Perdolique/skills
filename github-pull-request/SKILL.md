@@ -15,6 +15,7 @@ Always write PR content in English only
 - ≤50 characters, imperative mood ("Add feature" not "Added" or "Adds")
 - Accurately reflect main purpose of changes
 - No issue numbers in title (use description)
+- For monorepos, consider a scoped title (e.g., `feat(scope): description`)
 
 **Examples:**
 

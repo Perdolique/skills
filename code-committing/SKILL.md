@@ -20,9 +20,9 @@ Always write in English only
 - **Scope**: Module/package name (monorepo: exact package name or `all`)
 - **Body** (optional): Bullet list `- {emoji} {text}` (≤100 chars/line)
 - **Breaking**: Add `!` after type and `BREAKING CHANGE:` footer
-- **Issues**: End with `- Fixes #123` or `- Fixes PROJ-456`
+- **Issues**: End the body with a bullet like `- Fixes #123` or `- Fixes PROJ-456`
 
-**Types**: feat✨ fix🐛 docs📚 style💄 refactor♻️ perf⚡ test✅ build🔧 ci👷 chore🔨 revert⏪
+**Types**: feat ✨, fix 🐛, docs 📚, style 💄, refactor ♻️, perf ⚡, test ✅, build 🔧, ci 👷, chore 🔨, revert ⏪
 
 ## Examples
 
