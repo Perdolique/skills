@@ -6,9 +6,42 @@ license: Unlicense
 
 # GitHub Pull Request
 
+## Critical: Source of Changes
+
+**ALWAYS analyze ALL changes in the entire branch that will be merged**, not just:
+
+- ❌ The last commit
+- ❌ Previous chat context
+- ❌ Individual file changes mentioned earlier
+
+**Required approach:**
+
+1. Request full branch diff or complete changeset
+2. Review every modified file in the branch
+3. Understand the cumulative impact of all commits
+4. Base PR title and description on the complete picture
+
+This ensures PR descriptions accurately reflect the total scope of changes being merged into the target branch.
+
 ## Language Requirement
 
 Always write PR content in English only
+
+## Output Format for Chat
+
+When user requests PR content to be sent to chat (e.g., "send PR to chat", "show me the PR", "generate PR description"):
+
+**ALWAYS wrap the complete PR content in a markdown code block:**
+
+````markdown
+[PR Title Here]
+
+[Full PR Description Here]
+````
+
+This allows user to easily copy the entire PR content with proper formatting preserved.
+
+**DO NOT** output PR content as rendered markdown in chat - it must be in a copyable code block.
 
 ## PR Title
 
