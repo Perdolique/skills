@@ -1,14 +1,24 @@
 ---
 name: github-pull-request
-description: Generate GitHub pull request titles and descriptions from code changes. Use when creating PR, updating PR, generating PR content for output, or when user mentions pull request, PR, merge request, create PR, update PR, write PR description, PR text, generate PR, prepare PR, GitHub workflow, code review.
+description: Create GitHub pull requests directly via API from code changes. Analyzes branch commits, generates PR titles and descriptions, and creates PRs on GitHub by default. Use when user wants to create PR, open PR, make PR, submit PR, update PR, or mentions pull request, PR, merge request, code review, prepare PR, GitHub workflow. Also use when user asks to generate PR content for copying/viewing (fallback mode).
 license: Unlicense
 ---
 
 # GitHub Pull Request
 
-## Workflow for Generating PR Content
+## Default Action: Create PR on GitHub
 
-Follow this workflow systematically when generating PR titles and descriptions:
+**CRITICAL**: By default, always create the pull request directly on GitHub using available GitHub API tools.
+
+**Only generate PR content as text for chat when:**
+
+- User explicitly requests it ("show me the PR", "send PR to chat", "generate PR description for me to copy", etc.)
+- GitHub API is unavailable or authentication fails
+- User specifically asks NOT to create the PR yet
+
+## Workflow for Creating Pull Requests
+
+Follow this workflow systematically when creating PRs:
 
 ### Step 1: Determine the Scenario
 
@@ -43,6 +53,7 @@ Common base branches: `master`, `main`, `develop`
 ### Step 3: Get Complete Branch Changes
 
 **CRITICAL**: Analyze ALL changes in the entire branch that will be merged, not just:
+
 - ❌ The last commit
 - ❌ Previous chat context
 - ❌ Individual file changes mentioned earlier
@@ -118,13 +129,33 @@ Based on complete analysis, create:
 
 This workflow ensures PR descriptions accurately reflect the **total scope** of changes being merged.
 
+### Step 6: Create the Pull Request on GitHub
+
+**Default action - execute unless explicitly told otherwise:**
+
+1. Create PR using available GitHub API tools with:
+2. After successful creation, provide user with:
+   - PR URL
+   - Brief confirmation message
+
+**Only skip this step if:**
+
+- User explicitly requested text output only
+- Authentication/API errors occur (then fallback to text output)
+
 ## Language Requirement
 
 Always write PR content in English only
 
-## Output Format for Chat
+## Fallback: Output Format for Chat
 
-When user requests PR content to be sent to chat (e.g., "send PR to chat", "show me the PR", "generate PR description"):
+**Use this format ONLY when:**
+
+- User explicitly requests text output ("send PR to chat", "show me the PR", "generate PR description")
+- Cannot create PR due to API/authentication issues
+- User specifically asks not to create the PR yet
+
+When outputting PR content to chat instead of creating it on GitHub:
 
 **ALWAYS wrap the complete PR content in a markdown code block:**
 
