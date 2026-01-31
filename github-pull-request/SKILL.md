@@ -145,7 +145,7 @@ This workflow ensures PR descriptions accurately reflect the **total scope** of 
 
 ## Language Requirement
 
-Always write PR content in English only
+**CRITICAL**: Always write all PR content (title, description, comments) in English only, regardless of the chat language or user's preferred language. This is a strict requirement for all generated PR content.
 
 ## Fallback: Output Format for Chat
 
